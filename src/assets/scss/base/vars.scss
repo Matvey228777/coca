@@ -1,14 +1,23 @@
 :root {
-    // color
+    // colors
     --neutral-color-10: #fff;
     --neutral-color-20: #f5f5f5;
     --neutral-color-60: #18181D;
     --neutral-color-100: #1D1E25;
+    --neutral-color-120: #828282;
+    --neutral-color-130: #D9D9D9;
+
+    // primary colors
+    --primary-color-focus: #4E7DDB;
+
 
     // container
     --container-padding: 15px;
     --container-width: 1200px;
     
+
+    // transition
+    --transition-1: 0.2s;
 }
 
 [data-theme="dark"] {
