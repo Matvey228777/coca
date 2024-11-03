@@ -3,7 +3,7 @@ export const useTheme = () => {
     const themeSwitcher = document.querySelector('[data-theme-switcher');
 
     themeSwitcher.addEventListener('click', () => {
-        console.log(1)
+        console.log(1);
         const themeTargetDataset = themeTarget.dataset;
         themeTargetDataset.theme = 'dark';
     });
