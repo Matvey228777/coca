@@ -4,10 +4,40 @@
 
         @include flex-all-between;
     }
+    
+    &__link-homepage {
+        z-index: var(--z-index-4);
+    }
 
     &__right {
         display: flex;
         gap: 111px;
+
+        @include tablet {
+            gap: 60px;
+        }
+
+        @include small-tablet {
+            position: fixed;
+            top: 0;
+            left: -999vw;
+            z-index: var(--z-index-3);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80dvw;
+            height: 100dvh;
+            background-color: var(--neutral-color-10);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-1);
+
+            &--visible {
+                left: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 
     &__nav {
@@ -20,6 +50,10 @@
         gap: 32px;
 
         @include flex-align-center;
+
+        @include small-tablet {
+            flex-direction: column;
+        }
     }
 
     &__nav-item {
@@ -43,6 +77,13 @@
             }
         }
     }
+
+    
+    &__nav-link {
+        @include small-tablet {
+            padding: 20px;
+        }
+    }
 }
 
 .theme {
@@ -64,10 +105,12 @@
         width: 23px;
         height: 23px;
         background-color: var(--neutral-color-120);
-        transition: background-color var(--transition-1), left var(--transition-1);
+        transition:
+            background-color var(--transition-1),
+            left var(--transition-1);
     }
 
-    &__text{
+    &__text {
         position: absolute;
         top: -18px;
         left: 50%;
@@ -80,10 +123,29 @@
 
     &:has(&__checkbox:checked) {
         background-color: var(--neutral-color-60);
-        
+
         &::after {
             left: 38px;
             background-color: var(--primary-color-focus);
         }
     }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-index-2);
+    background-color: #000000b3;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-1);
+
+    &--visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.burger {
+    @include burger
 }

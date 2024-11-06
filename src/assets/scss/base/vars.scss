@@ -18,9 +18,25 @@
 
     // transition
     --transition-1: 0.2s;
+
+    // logo
+
+    --circle: #101010;
+    --logo-text: #101010;
+
+    // z-index 
+    --z-index-1: 1;
+    --z-index-2: 2;
+    --z-index-3: 3;
+    --z-index-4: 4;
 }
 
 [data-theme="dark"] {
     --neutral-color-10: #1D1E25;
     --neutral-color-100: #fff;
+
+    // logo
+
+    --circle: #343542;
+    --logo-text: #FFF;
 }
