@@ -1,4 +1,12 @@
 .header {
+    background-color: var(--neutral-color-10);
+
+    &--fixed {
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 0.1px 10px var(--neutral-color-120);
+    }
+
     &__inner {
         padding: 26px 0 22px;
 
