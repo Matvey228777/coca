@@ -1,0 +1,197 @@
+.hero {
+    padding-top: 114px;
+
+    &__container {
+        @include flex-justify-between;
+        align-items: end;
+    }
+
+    &__left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 596px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -50px;
+            z-index: var(--z-index-3);
+            display: inline-block;
+            width: 551px;
+            height: 551px;
+            background: #fa7515;
+            opacity: 0.17;
+            filter: blur(220px);
+        }
+    }
+
+    &__spoiler {
+        margin: 87px 0 114px;
+        font-weight: 700;
+        font-size: 80px;
+        letter-spacing: -3px;
+    }
+
+    &__text {
+        @include flex-align-center;
+        gap: 27px;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: -1px;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            flex-shrink: 0;
+            border: 1px solid var(--neutral-color-100);
+            width: 76px;
+            transform: translateY(-17px);
+        }
+    }
+
+    &__email {
+        @include flex-align-center;
+        gap: 16px;
+        margin-top: 78px;
+
+        &-input {
+            border-bottom: 1px solid var(--neutral-color-40);
+            width: 280px;
+            height: 47px;
+            background-color: transparent;
+        }
+
+        &-btn {
+            border-radius: 100px;
+            padding: 16px 32px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0;
+            color: var(--neutral-color-10);
+            background-color: var(--neutral-color-100);
+            transition: all var(--transition-1);
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    &__right {
+        position: relative;
+    }
+
+    &__sales-report {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 20px 40px 80px 0 #5960871f;
+        color: #1d1e25;
+        background-color: white;
+
+        &-text {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: -0.5px;
+        }
+    }
+
+    &__customer-growth {
+        position: absolute;
+        top: -33px;
+        right: -133px;
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+        border-radius: 8px;
+        padding: 20px;
+        width: 213.21px;
+        height: 220.63px;
+        box-shadow: 20px 40px 80px 0 #2d33511f;
+        color: #1d1e25;
+        background-color: white;
+
+        &-text {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: -0.5px;
+        }
+    }
+
+    &__table {
+        position: relative;
+        margin-top: 28.75px;
+        border-radius: 8px;
+        padding: 20px;
+        width: 419px;
+        box-shadow: 20px 40px 80px 0 #2d33511f;
+        text-align: left;
+        background-color: #000;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -266px;
+            left: 232px;
+            z-index: var(--z-index-3);
+            width: 525px;
+            height: 525px;
+            background: #e2f8f0b3;
+            opacity: 0.3;
+            filter: blur(180px);
+        }
+
+        &-head {
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0;
+            color: var(--neutral-color-140);
+        }
+
+        &-money {
+            padding: 4px 0 8px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 26px;
+            letter-spacing: 0;
+            color: #fff;
+        }
+
+        &-percent {
+            &::after {
+                content: 'from last year';
+                margin-left: 7.5px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: -0.5px;
+                color: var(--neutral-color-140);
+            }
+
+            &--green {
+                color: var(--success-color-10);
+
+                &::before {
+                    content: url('../../../assets/svg/arrow-green.svg');
+                    margin-right: 7.5px;
+                }
+            }
+
+            &--red {
+                color: var(--error-color-10);
+
+                &::before {
+                    content: url('../../../assets/svg/arrow-red.svg');
+                    margin-right: 7.5px;
+                }
+            }
+        }
+    }
+}
