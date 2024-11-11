@@ -19,6 +19,49 @@ html {
     background-color: var(--neutral-color-10);
     transition: var(--transition-1);
 
+    &::before {
+        content: '';
+        position: absolute;
+        top: 134px;
+        left: 356px;
+        z-index: var(--z-index-0);
+        width: 551px;
+        height: 551px;
+        background: #fa7515;
+        opacity: 0.25;
+        filter: blur(220px);
+
+        @include normal-desktop {
+            top: 236px;
+            left: 55px;
+        }
+
+        @include small-tablet {
+            right: 0;
+            width: 200px;
+            height: 200px;
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 324px;
+        right: 275px;
+        z-index: var(--z-index-0);
+        width: 525px;
+        height: 525px;
+        background: #e2f8f0b3;
+        opacity: 0.35;
+        filter: blur(180px);
+
+        @include normal-desktop {
+            top: 358px;
+            right: 92px;
+        }
+    }
+
     &--fixed {
         overflow-y: hidden;
     }

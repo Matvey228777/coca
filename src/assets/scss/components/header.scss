@@ -1,14 +1,15 @@
 .header {
     background-color: var(--neutral-color-10);
+    transition: all var(--transition-1);
 
-    &--fixed {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: var(--z-index-3);
-        transition: all var(--transition-1);
-    }
+    // &--fixed {
+    //     position: fixed;
+    //     top: 0;
+    //     right: 0;
+    //     left: 0;
+    //     z-index: var(--z-index-3);
+    //     transition: all var(--transition-1);
+    // }
 
     &__inner {
         padding: 26px 0 22px;

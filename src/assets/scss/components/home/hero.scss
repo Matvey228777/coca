@@ -1,9 +1,24 @@
 .hero {
-    padding-top: 114px;
+    padding-top: 87px;
 
     &__container {
-        @include flex-justify-between;
+        display: flex;
+        gap: 97px;
         align-items: end;
+
+        @include normal-desktop {
+            gap: 50px;
+        }
+
+        @include small-desktop {
+            justify-content: space-between;
+        }
+
+        @include mini-desktop {
+            gap: 70px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__left {
@@ -11,27 +26,23 @@
         display: flex;
         flex-direction: column;
         max-width: 596px;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: -50px;
-            z-index: var(--z-index-3);
-            display: inline-block;
-            width: 551px;
-            height: 551px;
-            background: #fa7515;
-            opacity: 0.17;
-            filter: blur(220px);
-        }
     }
 
     &__spoiler {
-        margin: 87px 0 114px;
+        margin: 0 0 114px;
         font-weight: 700;
         font-size: 80px;
         letter-spacing: -3px;
+
+        @include tablet {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        @include small-tablet {
+            margin-bottom: 40px;
+            font-size: 60px;
+        }
     }
 
     &__text {
@@ -41,6 +52,10 @@
         line-height: 42px;
         letter-spacing: -1px;
 
+        @include tablet {
+            text-align: center;
+        }
+
         &::before {
             content: '';
             display: inline-block;
@@ -48,6 +63,14 @@
             border: 1px solid var(--neutral-color-100);
             width: 76px;
             transform: translateY(-17px);
+
+            @include tablet {
+                transform: translate(44px, -40px);
+            }
+
+            @include small-tablet {
+                display: none;
+            }
         }
     }
 
@@ -55,6 +78,16 @@
         @include flex-align-center;
         gap: 16px;
         margin-top: 78px;
+
+        @include tablet {
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        @include small-tablet {
+            flex-direction: column;
+            margin-top: 20px;
+        }
 
         &-input {
             border-bottom: 1px solid var(--neutral-color-40);
@@ -82,6 +115,12 @@
 
     &__right {
         position: relative;
+        
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__sales-report {
@@ -93,6 +132,26 @@
         box-shadow: 20px 40px 80px 0 #5960871f;
         color: #1d1e25;
         background-color: white;
+
+        @include small-desktop {
+            max-width: 318px;
+        }
+
+        @include mini-desktop {
+            min-width: 420px;
+            transform: translateX(-91px);
+        }
+
+        @include small-tablet {
+            order: 2;
+            transform: translateX(0);
+        }
+
+        @include mobile {
+            width: 80dvw;
+            min-width: 0;
+            max-width: none;
+        }
 
         &-text {
             font-weight: 700;
@@ -117,6 +176,28 @@
         color: #1d1e25;
         background-color: white;
 
+        @include small-desktop {
+            top: -148px;
+            right: -1px;
+        }
+
+        @include mini-desktop {
+            top: -23px;
+            right: -95px;
+        }
+
+        @include small-tablet {
+            position: static;
+            order: 1;
+            margin-bottom: 28.75px;
+            width: 100%;
+            height: 100%;
+        }
+
+        @include mobile {
+            width: 80dvw;
+        }
+
         &-text {
             font-weight: 700;
             font-size: 16px;
@@ -135,17 +216,12 @@
         text-align: left;
         background-color: #000;
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: -266px;
-            left: 232px;
-            z-index: var(--z-index-3);
-            width: 525px;
-            height: 525px;
-            background: #e2f8f0b3;
-            opacity: 0.3;
-            filter: blur(180px);
+        @include small-tablet {
+            order: 3;
+        }
+
+        @include mobile {
+            width: 80dvw;
         }
 
         &-head {
