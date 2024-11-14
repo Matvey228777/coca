@@ -134,7 +134,7 @@
     }
 
     &:has(&__checkbox:checked) {
-        background-color: var(--neutral-color-60);
+        background-color: var(--neutral-color-150);
 
         &::after {
             left: 38px;

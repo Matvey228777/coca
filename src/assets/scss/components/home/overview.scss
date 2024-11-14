@@ -1,0 +1,122 @@
+.overview {
+    position: relative;
+    z-index: var(--z-index-2);
+    margin-top: 141.5px;
+    padding: 100px 0;
+    color: #fff;
+    background-color: #1d1e25;
+    
+    @include mini-desktop {
+        text-align: center;
+    }
+
+    @include mobile {
+        padding: 50px 0;
+    }
+
+    &__title {
+        max-width: 710px;
+        line-height: 120%;
+        letter-spacing: -2px;
+
+        @include mini-desktop{
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        padding: 24px 0 80px;
+        max-width: 615px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0;
+        color: var(--neutral-color-60);
+
+        @include mini-desktop{
+            margin: 0 auto;
+        }
+
+        @include small-tablet {
+            padding: 12px 0 40px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 56px;
+        justify-content: space-between;
+        grid-template-columns: 453px 481px;
+
+        @include mini-desktop{
+            gap: 20px;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        &-el {
+            display: flex;
+            flex-direction: column;
+            
+            @include mini-desktop {
+                align-items: center;
+            }
+        }
+
+        &-el:nth-child(1) {
+            & p {
+                max-width: 445px;
+            }
+        }
+
+        &-el:nth-child(2) {
+            & p {
+                max-width: 399px;
+            }
+        }
+
+        &-el:nth-child(3) {
+            & p {
+                max-width: 453px;
+            }
+        }
+
+        &-el:nth-child(4) {
+            & p {
+                max-width: 481px;
+            }
+        }
+
+        &-img {
+            max-width: 40px;
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        &-h4 {
+            margin: 24px 0;
+            max-width: 259px;
+            line-height: 42px;
+            letter-spacing: -1px;
+
+            @include small-tablet {
+                margin: 16px 0;
+            }
+        }
+
+        &-text {
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 0;
+            color: var(--neutral-color-60);
+
+            @include small-tablet {
+                margin-top: auto;
+            }
+        }
+    }
+}

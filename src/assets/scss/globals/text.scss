@@ -4,16 +4,25 @@
     }
 
     &-h2 {
+        font-weight: 600;
         font-size: 56px;
+
+        @include small-tablet {
+            font-size: 38px;
+        }
     }
 
     &-h3 {
         font-size: 40px;
-
     }
 
     &-h4 {
-        font-size: 36px;
+        font-weight: 600;
+        font-size: 32px;
+
+        @include small-tablet {
+            font-size: 25px;
+        }
     }
 
     &-h5 {
@@ -26,7 +35,6 @@
     &-h4,
     &-h5 {
         line-height: 120%;
-    }
 }
 
 .text {
@@ -55,4 +63,4 @@
             font-size: 14px;
         }
     }
-}
+}}
