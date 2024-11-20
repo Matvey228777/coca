@@ -1,13 +1,29 @@
 .features {
     padding: 160px 0 94px;
 
+    @include mini-desktop {
+        padding: 80px 0 47px;
+    }
+
     &__container {
         display: flex;
         gap: 58px;
+
+        @include small-desktop {
+            gap: 6px;
+            justify-content: space-between;
+        }
+
+        @include mini-desktop {
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__left {
         position: relative;
+        flex-shrink: 0;
     }
 
     &__stat {
@@ -17,6 +33,18 @@
         padding: 17.5px;
         max-width: 290px;
         background-color: #fff;
+
+        @include mobile {
+            right: 9px;
+            bottom: 10px;
+            scale: 0.8;
+        }
+
+        @include small-mobile {
+            right: -30px;
+            bottom: -40px;
+            scale: 0.65;
+        }
 
         &-heading {
             display: flex;
@@ -84,11 +112,17 @@
 
     &__right {
         max-width: 557px;
+
+        @include mini-desktop {
+            max-width: none;
+            text-align: center;
+        }
     }
 
     &__title {
         line-height: 120%;
         letter-spacing: -2px;
+
     }
 
     &__comment {
@@ -98,6 +132,11 @@
         line-height: 32px;
         letter-spacing: 0;
         color: var(--neutral-color-60);
+
+        @include mini-desktop {
+            margin: 14px auto 30px;
+            max-width: 505px;
+        }
     }
 
     &__list {
@@ -111,6 +150,30 @@
 
             & img {
                 margin: 0 23px 0 3px;
+
+                @include mini-desktop {
+                    margin: 0 23px 0 20%;
+                }
+
+                @include tablet {
+                    margin: 0 15px 0 0;
+                }
+
+                @include small-tablet {
+                    margin: 5px 10px 0 0;
+                }
+            }
+
+            @include mini-desktop {
+                max-width: none;
+            }
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            @include small-tablet {
+                align-items: start;
             }
         }
 
