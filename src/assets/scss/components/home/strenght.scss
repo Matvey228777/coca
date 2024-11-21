@@ -1,8 +1,19 @@
 .strength {
     padding: 66px 0 160px;
 
+    @include small-tablet {
+        padding: 40px 0 80px;
+    }
+
     &__preview {
-        display: flex;
+        display: grid;
+        align-items: start;
+        grid-template-columns: repeat(4,auto);
+
+        @include small-tablet {
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         &-item {
             font-weight: 500;
@@ -12,8 +23,25 @@
 
             @include flex-align-center;
 
+            @include small-tablet {
+                justify-content: center;
+                text-align: center;
+            }
+
             &:not(:last-child) {
                 padding-right: 76px;
+
+                @include small-desktop {
+                    padding-right: 50px;
+                }
+
+                @include mini-desktop {
+                    padding-right: 25px;
+                }
+
+                @include small-tablet {
+                    padding-right: 0;
+                }
 
                 &::after {
                     content: '';
@@ -21,15 +49,35 @@
                     width: 1px;
                     height: 99px;
                     background-color: var(--neutral-color-40);
+
+                    @include small-tablet {
+                        display: none;
+                    }
                 }
             }
 
             &:last-child {
                 max-width: 200px;
+
+                @include small-tablet {
+                    max-width: none;
+                }
             }
 
             &-text {
                 padding-right: 76px;
+
+                @include small-desktop {
+                    padding-right: 50px;
+                }
+
+                @include mini-desktop {
+                    padding-right: 25px;
+                }
+
+                @include small-tablet {
+                    padding-right: 0;
+                }
 
                 & span {
                     display: block;
@@ -38,6 +86,10 @@
                     line-height: 120%;
                     letter-spacing: 0;
                     color: var(--neutral-color-100);
+
+                    @include small-tablet {
+                        font-size: 50px;
+                    }
                 }
             }
         }
@@ -45,10 +97,21 @@
 
     &__img {
         margin: 80px 0;
+
+        @include small-tablet {
+            margin: 40px 0;
+        }
     }
 
     &__advert {
         display: flex;
+
+        @include small-tablet {
+            gap: 15px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
         &-text {
             max-width: 413px;
@@ -56,6 +119,10 @@
             line-height: 32px;
             letter-spacing: 0;
             color: var(--neutral-color-60);
+
+            @include small-tablet {
+                max-width: 600px;
+            }
         }
     }
 }
