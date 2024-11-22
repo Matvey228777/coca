@@ -71,12 +71,10 @@
 }
 
 .swiper {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     
     @include mobile {
-        opacity: 1;
-        visibility: visible;
+        display: block;
     }
     
     @include small-mobile {
