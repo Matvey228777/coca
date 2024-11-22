@@ -1,0 +1,21 @@
+.insight {
+    padding: 150px 0 91px;
+    
+    &__heading {
+        text-align: center;
+
+        &-title {
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -2px;
+        }
+
+        &-text {
+            margin-top: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0;
+            color: var(--neutral-color-60);
+        }
+    }
+}
