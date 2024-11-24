@@ -2,6 +2,7 @@
     &__container {
         display: flex;
         gap: 30px;
+        justify-content: space-around;
         border-top: 1px solid #ededed;
         border-bottom: 1px solid #ededed;
         padding: 64px 15px;
@@ -14,15 +15,16 @@
             gap: 10px;
         }
 
-        @include small-mobile {
+        @include mobile {
             flex-direction: column;
+            align-items: center;
         }
     }
 
     &__heading {
         max-width: 323px;
 
-        @include small-mobile {
+        @include mobile {
             text-align: center;
         }
 
@@ -70,14 +72,14 @@
     }
 }
 
-.swiper {
+.swiper1 {
     display: none;
     
     @include mobile {
         display: block;
     }
     
-    @include small-mobile {
+    @include mobile {
         max-width: 92dvw;
     }
 

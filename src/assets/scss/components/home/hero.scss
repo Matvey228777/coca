@@ -76,6 +76,7 @@
 
     &__email {
         @include flex-align-center;
+        z-index: var(--z-index-3);
         gap: 16px;
         margin-top: 78px;
 

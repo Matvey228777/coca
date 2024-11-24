@@ -6,3 +6,4 @@ import '../assets/scss/main.scss';
 useTheme();
 useBurger();
 swiper();
+// swiper1();
