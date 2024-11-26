@@ -81,7 +81,7 @@
     &-button-prev,
     &-button-next {
         position: absolute;
-        right: 0px;
+        right: 0;
         bottom: 3px;
         z-index: var(--z-index-1);
         display: flex;
