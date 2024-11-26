@@ -5,6 +5,8 @@
     --neutral-color-40: #ced1d8;
     --neutral-color-60: #7E8492;
     --neutral-color-100: #1D1E25;
+    --neutral-color-100-reversed: #fff;
+    --neutral-color-100-hover: #45464d;
     --neutral-color-120: #828282;
     --neutral-color-130: #D9D9D9;
     --neutral-color-140: #5C616F;
@@ -44,6 +46,8 @@
 [data-theme="dark"] {
     --neutral-color-10: #1D1E25;
     --neutral-color-100: #fff;
+    --neutral-color-100-hover: #8b8b8b;
+    --neutral-color-100-reversed: #1D1E25;
 
     // logo
 

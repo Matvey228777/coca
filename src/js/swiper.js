@@ -27,4 +27,14 @@ export function swiper() {
             delay: 6000,
         },
     });
+
+    new Swiper('.swiper3', {
+        slidesPerView: 1,
+        spaceBetween: 310,
+
+        navigation: {
+            nextEl: '.swiper3-button-next',
+            prevEl: '.swiper3-button-prev',
+        },
+    });
 }

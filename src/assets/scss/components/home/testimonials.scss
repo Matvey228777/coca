@@ -1,0 +1,129 @@
+.testimonials {
+    padding: 69px 0 160px;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-title {
+            max-width: 530px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -2px;
+        }
+
+        &-text {
+            max-width: 376px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0;
+            color: var(--neutral-color-60);
+        }
+    }
+}
+
+.swiper3 {
+    position: relative;
+    overflow: hidden;
+
+    &-quotes {
+        margin-top: 48px;
+    }
+
+    &-slide {
+        padding-left: 157px;
+        max-width: 898px;
+
+        &-rating {
+            display: flex;
+            gap: 8px;
+            line-height: 26px;
+
+            & img {
+                width: 132px;
+                height: 20px;
+            }
+        }
+
+        &-text {
+            margin: 16px 0 40px;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -1px;
+        }
+
+        &-user {
+            display: flex;
+            gap: 24px;
+
+            & img {
+                width: 56px;
+                height: 56px;
+            }
+
+            &-text {
+                font-weight: 600;
+                line-height: 26px;
+                letter-spacing: 0;
+
+                & span {
+                    display: block;
+                    font-weight: 500;
+                    line-height: 26px;
+                    letter-spacing: 0;
+                    color: var(--neutral-color-60);
+                }
+            }
+        }
+    }
+
+    &-button-prev,
+    &-button-next {
+        position: absolute;
+        right: 0px;
+        bottom: 3px;
+        z-index: var(--z-index-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--neutral-color-100);
+
+        &:hover {
+            background-color: var(--neutral-color-100-hover);
+            transition: all var(--transition-1);
+            scale: 0.97;
+        }
+
+        & svg {
+            & path {
+                fill: var(--neutral-color-100-reversed);
+            }
+        }
+    }
+
+    &-button-prev {
+        right: 66px;
+        bottom: 3px;
+        rotate: 180deg;
+    }
+}
+
+.swiper-button-disabled {
+    border: 1px solid var(--neutral-color-40);
+    background-color: transparent;
+
+    &:hover {
+        background-color: transparent;
+        scale: 1;
+    }
+
+    & svg {
+        & path {
+            fill: var(--neutral-color-40);
+        }
+    }
+}
