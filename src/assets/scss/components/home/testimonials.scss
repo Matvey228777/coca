@@ -1,10 +1,19 @@
 .testimonials {
     padding: 69px 0 160px;
 
+    @include tablet {
+        padding: 30px 0 70px;
+    }
+
     &__heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include small-tablet {
+            flex-direction: column;
+            text-align: center;
+        }
 
         &-title {
             max-width: 530px;
@@ -29,11 +38,24 @@
 
     &-quotes {
         margin-top: 48px;
+
+        @include small-tablet {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
     }
 
     &-slide {
         padding-left: 157px;
         max-width: 898px;
+
+        @include small-tablet {
+            padding-left: 60px;
+        }
+
+        @include mobile {
+            padding-left: 30px;
+        }
 
         &-rating {
             display: flex;
@@ -51,13 +73,32 @@
             font-weight: 500;
             line-height: 130%;
             letter-spacing: -1px;
+
+            @include small-tablet {
+                margin: 8px 0 20px;
+            }
         }
 
         &-user {
             display: flex;
-            gap: 24px;
+            justify-content: space-between;
+
+            &-container-text,
+            &-container-buttons {
+                display: flex;
+                gap: 15px;
+
+                @include tablet {
+                    gap: 10px;
+                }
+            }
+
+            @include mobile {
+                gap: 8px;
+            }
 
             & img {
+                border-radius: 50%;
                 width: 56px;
                 height: 56px;
             }
@@ -80,9 +121,9 @@
 
     &-button-prev,
     &-button-next {
-        position: absolute;
-        right: 0;
-        bottom: 3px;
+        // position: absolute;
+        // right: 0;
+        // bottom: 3px;
         z-index: var(--z-index-1);
         display: flex;
         align-items: center;
